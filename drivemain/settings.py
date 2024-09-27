@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-w3p)6tcejhf_p+ws&h6^c3yu88%%!g(mz25$lh6h)9r2z2y&!m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['naina0812.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -134,4 +134,4 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 # To allow all domains (not recommended in production):
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True

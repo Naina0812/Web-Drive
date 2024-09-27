@@ -8,6 +8,7 @@ import json
 from rest_framework import status,generics
 import hashlib
 import boto3
+from django.shortcuts import get_object_or_404
 
 def generate_hashpath(folder_path, user_id):
     data = f"{folder_path}{user_id}"
@@ -263,10 +264,7 @@ class GetPresignedURLView(generics.CreateAPIView):
         return Response({'post': post}, status=status.HTTP_200_OK)
 # views.py
 
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework import status
-from django.shortcuts import get_object_or_404
+
 
 @api_view(['PUT'])
 def rename_entity(request):
